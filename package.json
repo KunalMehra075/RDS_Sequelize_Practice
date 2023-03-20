@@ -1,0 +1,27 @@
+{
+  "name": "rds_sequelize_practice",
+  "version": "1.0.0",
+  "description": "-",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KunalMehra075/RDS_Sequelize_Practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KunalMehra075/RDS_Sequelize_Practice/issues"
+  },
+  "homepage": "https://github.com/KunalMehra075/RDS_Sequelize_Practice#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.2.0",
+    "nodemon": "^2.0.21",
+    "sequelize": "^6.29.3"
+  }
+}
