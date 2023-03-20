@@ -1,4 +1,13 @@
-const app = require("express")();
+const { connection } = require("./Config/db");
+const { orderRouter } = require("./Routes/OrderRouter.route");
+const { userRouter } = require("./Routes/UserRouter.route");
+const express = require("express");
+
+const app = express();
+app.use(express.json());
+
+app.use("/users", userRouter);
+app.use("/orders", orderRouter);
 
 app.get("/", (req, res) => {
   try {
@@ -9,6 +18,12 @@ app.get("/", (req, res) => {
   }
 });
 
-app.listen(4500, () => {
-  console.log("Server Running in port 4500");
+app.listen(4500, async () => {
+  try {
+    await connection.sync();
+    console.log("Connected to SQL DB");
+  } catch (err) {
+    console.log("Error connecting to DB");
+  }
+  console.log(`Server is Rocking on port ${4500}`);
 });
