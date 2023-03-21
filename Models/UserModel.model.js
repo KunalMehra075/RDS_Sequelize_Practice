@@ -8,12 +8,12 @@ const UserModel = connection.define("users", {
     autoIncrement: true,
   },
   email: {
-    type: Sequelize.STRING(32),
+    type: Sequelize.STRING,
     allowNull: false,
     unique: true,
   },
   password: {
-    type: Sequelize.STRING(32),
+    type: Sequelize.STRING,
     allowNull: false,
     unique: true,
   },
